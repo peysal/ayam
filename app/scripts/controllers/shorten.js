@@ -9,9 +9,11 @@
  */
 angular.module('ayamApp')
   .controller('ShortenCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.originalName = 'Original Name';
+    $scope.transformedName = 'Transformed Name';
+    $scope.originalNameCount = 0;
+    $scope.transformedNameCount = 0;
+    $scope.transformedPrefix = 'Prefix (3 characters)';
+
+
   });
