@@ -11,11 +11,21 @@ angular.module('ayamApp')
   .controller('ShortenCtrl', function ($scope) {
     $scope.originalNameCount = 0;
     $scope.transformedNameCount = 0;
+    $scope.transformedPrefix = '';
 
     $scope.henshin = function() {
     	$scope.originalNameCount = $scope.originalName.length;
-    	$scope.transformedName = $scope.originalName;
-    	$scope.transformedNameCount = $scope.transformedName.length;
-    };
+    	if ($scope.originalNameCount > 30) {
+	    	$scope.transformedName = $scope.transformedPrefix +
+	    	 $scope.originalName.replace(/[aeiou]/ig,'');
+	    	$scope.transformedNameCount = $scope.transformedName.length;
+	    	//TODO make the original character count red
+    	} else {
+    		//TODO less than 30 then make the original character count green
+    	}
 
+    	if ($scope.transformedNameCount > 30) {
+    		//TODO make the transformedName red
+    	}
+    };
   });
