@@ -11,10 +11,11 @@ angular.module('ayamApp')
   .controller('ShortenCtrl', function ($scope) {
     $scope.originalNameCount = 0;
     $scope.transformedNameCount = 0;
-    $scope.transformedPrefix = 'Prefix (3 characters)';
 
     $scope.henshin = function() {
+    	$scope.originalNameCount = $scope.originalName.length;
     	$scope.transformedName = $scope.originalName;
+    	$scope.transformedNameCount = $scope.transformedName.length;
     };
 
   });
