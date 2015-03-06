@@ -12,6 +12,11 @@ angular.module('ayamApp')
     $scope.originalNameCount = 0;
     $scope.transformedNameCount = 0;
     $scope.transformedPrefix = '';
+    $scope.userMessage = {
+        cssClass: 'alert alert-info',
+        strong: 'Helloo Kawan!',
+        detail: 'Put something into original name and prefix.'
+    };
 
     $scope.henshin = function() {
     	$scope.originalNameCount = $scope.originalName.length;
