@@ -22,7 +22,7 @@ angular.module('ayamApp')
     	$scope.originalNameCount = $scope.originalName.length;
     	if ($scope.originalNameCount > 30) {
 	    	$scope.transformedName = $scope.transformedPrefix +
-	    	 $scope.originalName.replace(/[aeiou]/ig,'');
+	    	 $scope.originalName.replace(/[aeiou]/ig,'').replace(/ /g,'').toUpperCase();
 	    	$scope.transformedNameCount = $scope.transformedName.length;
     	} else {
             $scope.userMessage = {
