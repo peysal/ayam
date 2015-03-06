@@ -24,13 +24,22 @@ angular.module('ayamApp')
 	    	$scope.transformedName = $scope.transformedPrefix +
 	    	 $scope.originalName.replace(/[aeiou]/ig,'');
 	    	$scope.transformedNameCount = $scope.transformedName.length;
-	    	//TODO make the original character count red
     	} else {
-    		//TODO less than 30 then make the original character count green
-    	}
+            $scope.userMessage = {
+                cssClass: 'alert alert-success',
+                strong: 'Ok Kawan!',
+                detail: 'Looks like ur characteristic less than 30. I don\'t need to work'
+            };    
+        }
 
-    	if ($scope.transformedNameCount > 30) {
-    		//TODO make the transformedName red
-    	}
+    	if ($scope.transformedNameCount <= 30 && $scope.originalNameCount > 30) {
+            $scope.userMessage.cssClass = 'alert alert-success';
+            $scope.userMessage.strong = 'hooyahh!';
+            $scope.userMessage.detail = 'I removed all the vowels character. Now its less than 30';
+    	} else if ($scope.transformedNameCount > 30) {
+            $scope.userMessage.cssClass = 'alert alert-danger';
+            $scope.userMessage.strong = 'Alamak!!';
+            $scope.userMessage.detail = 'I guess I failed to shorten ur characterisc to less than 30';
+        }
     };
   });
