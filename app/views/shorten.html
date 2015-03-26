@@ -14,17 +14,19 @@
         </div>
         <div class="form-group">
             <div class="input-group">
-<input type="text" class="form-control" placeholder="Prefix (3 characters)" aria-describedby="prepend" ng-blur="henshin()" ng-model="transformedPrefix">
-</div>
-        </div>
-        <div class="form-group">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Transformed Name" aria-describedby="transform-count" value="{{transformedName}}">
-                <span class="input-group-addon" id="transform-count" ng-model="transformedNameCount"> {{transformedNameCount}} of characters</span>
+                <input type="text" class="form-control" placeholder="Prefix (3 characters)" aria-describedby="prepend" ng-blur="henshin()" ng-model="transformedPrefix">
             </div>
-        </div>
-        <div class="form-group">
-            <div class="{{userMessage.cssClass}}" role="alert"><strong>{{userMessage.strong}}</strong> {{userMessage.detail}}</div>
+            <input type="text" class="form-control" placeholder="Prefix (3 characters)" aria-describedby="prepend" ng-blur="henshin()" ng-model="transformedPrefix">
         </div>
     </div>
+    <div class="form-group">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Transformed Name" aria-describedby="transform-count" value="{{transformedName}}">
+            <span class="input-group-addon" id="transform-count" ng-model="transformedNameCount"> {{transformedNameCount}} of characters</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="{{userMessage.cssClass}}" role="alert"><strong>{{userMessage.strong}}</strong> {{userMessage.detail}}</div>
+    </div>
+</div>
 </div>
